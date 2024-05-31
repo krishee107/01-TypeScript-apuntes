@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
     description: string;
     price: number;
 }
@@ -23,7 +23,7 @@ interface TaxCalculationOptions { // Creación de una interfaz para definir los 
     products: Product[];
 }
 
-function taxCalculation(options: TaxCalculationOptions): [number, number] {
+export function taxCalculation(options: TaxCalculationOptions): [number, number] {
     const { tax, products } = options;
     let total = 0;
 
@@ -44,4 +44,6 @@ const [total, ttax] = taxCalculation({
 
 console.log(`Total: ${total}, Tax: ${ttax}`);
 
-export { };
+export {
+
+};
